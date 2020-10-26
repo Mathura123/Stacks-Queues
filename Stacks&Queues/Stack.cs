@@ -8,11 +8,11 @@ namespace Stacks_Queues
     {
         public Node top;
         public Stack()
-        { 
+        {
         }
         public Stack(int[] datas)
         {
-            foreach(int data in datas)
+            foreach (int data in datas)
             {
                 Push(data);
             }
@@ -27,31 +27,45 @@ namespace Stacks_Queues
         }
         public void Pop()
         {
-            if (top == null)
-                Console.WriteLine("No values in Stack");
-            else
+            try
             {
-                Console.WriteLine($"POPED {top.data} from Top");
-                top = top.next;
+                if (top == null)
+                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                else
+                {
+                    Console.WriteLine($"POPED {top.data} from Top");
+                    top = top.next;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Exception in {nameof(Pop)} : {e.Message}");
             }
         }
         public void Display()
         {
-            if(top==null)
-                Console.WriteLine("No Data Yet");
-            else
+            try
             {
-                Console.WriteLine("----------------");
-                Console.WriteLine($"At Top: {top.data}");
-                Node tempNode = top;
-                int level = 1;
-                while (tempNode.next!= null)
+                if (top == null)
+                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                else
                 {
-                    Console.WriteLine($"At Level {level} : {tempNode.next.data}");
-                    tempNode = tempNode.next;
-                    level++;
+                    Console.WriteLine("----------------");
+                    Console.WriteLine($"At Top: {top.data}");
+                    Node tempNode = top;
+                    int level = 1;
+                    while (tempNode.next != null)
+                    {
+                        Console.WriteLine($"At Level {level} : {tempNode.next.data}");
+                        tempNode = tempNode.next;
+                        level++;
+                    }
+                    Console.WriteLine("-----------------");
                 }
-                Console.WriteLine("-----------------");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Exception in {nameof(Display)} : {e.Message}");
             }
         }
     }
