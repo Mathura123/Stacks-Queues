@@ -24,6 +24,7 @@ namespace StacksQueuesProblem
             queueObj.Enqueue(60);
             queueObj.Enqueue(90);
             queueObj.Enqueue(0);
+            queueObj.Dequeue();
             queueObj.Display();
         }
     }
