@@ -6,7 +6,7 @@ namespace StacksQueuesProblem
 {
     class Queue
     {
-        private Node top;
+        private Node first;
         public Queue()
         {
         }
@@ -20,11 +20,11 @@ namespace StacksQueuesProblem
         public void Enqueue(int data)
         {
             Node newNode = new Node(data);
-            if (top == null)
-                top = newNode;
+            if (first == null)
+                first = newNode;
             else
             {
-                Node tempNode = top;
+                Node tempNode = first;
                 while (tempNode.next != null)
                 {
                     tempNode = tempNode.next;
@@ -32,6 +32,31 @@ namespace StacksQueuesProblem
                 tempNode.next = newNode;
             }
             Console.WriteLine($"ENQUEUE {data}");
+        }
+        public void Display()
+        {
+            try
+            {
+                if (first == null)
+                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                else
+                {
+                    Console.WriteLine("----------------");
+                    Console.WriteLine($"At First : {first.data}");
+                    Node tempNode = first;
+                    int level = 1;
+                    while (tempNode.next != null)
+                    {
+                        Console.WriteLine($"At {level} : {tempNode.next.data}");
+                        tempNode = tempNode.next;
+                        level++;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Exception in {nameof(Display)} : {e.Message}");
+            }
         }
     }
 }

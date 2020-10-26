@@ -17,11 +17,14 @@ namespace StacksQueuesProblem
             stackObj.Pop();
             stackObj.Peek();
             stackObj.Display();
-            Console.WriteLine("\n=============================================");
+            Console.WriteLine("=============================================");
             Console.WriteLine("Working on Queue");
-            Queue queueObj = new Queue(new[] { 91,80});
+            Queue queueObj = new Queue();
             queueObj.Enqueue(9);
+            queueObj.Enqueue(60);
+            queueObj.Enqueue(90);
             queueObj.Enqueue(0);
+            queueObj.Display();
         }
     }
 }
