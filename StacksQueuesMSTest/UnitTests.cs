@@ -48,6 +48,19 @@ namespace StacksQueuesMSTest
             }
         }
         [TestMethod]
+        public void Dequeue_Method_Should_Throw_QueueException_When_Queue_Is_Empty()
+        {
+            try
+            {
+                StacksQueuesProblem.Queue testingObj = new StacksQueuesProblem.Queue();
+                testingObj.Dequeue();
+            }
+            catch (Exception e)
+            {
+                Assert.AreEqual(e.Message, "No Value in Queue");
+            }
+        }
+        [TestMethod]
         public void Display_Method_Should_Throw_QueueException_When_Queue_Is_Empty()
         {
             try
