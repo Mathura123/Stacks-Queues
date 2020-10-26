@@ -42,6 +42,23 @@ namespace StacksQueuesProblem
                 Console.WriteLine($"Exception in {nameof(Pop)} : {e.Message}");
             }
         }
+        public void Peek()
+        {
+            try
+            {
+                if (top == null)
+                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                else
+                {
+                    Console.WriteLine("----------------");
+                    Console.WriteLine($"At Top is {top.data}");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Exception in {nameof(Pop)} : {e.Message}");
+            }
+        }
         public void Display()
         {
             try
@@ -60,7 +77,6 @@ namespace StacksQueuesProblem
                         tempNode = tempNode.next;
                         level++;
                     }
-                    Console.WriteLine("-----------------");
                 }
             }
             catch (Exception e)

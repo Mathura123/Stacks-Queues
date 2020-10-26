@@ -14,6 +14,7 @@ namespace StacksQueuesProblem
             stackObj.Push(0);
             stackObj.Push(60);
             stackObj.Pop();
+            stackObj.Peek();
             stackObj.Display();
         }
     }
