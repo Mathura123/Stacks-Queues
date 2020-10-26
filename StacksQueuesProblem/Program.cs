@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Stacks_Queues
+namespace StacksQueuesProblem
 {
     class Program
     {

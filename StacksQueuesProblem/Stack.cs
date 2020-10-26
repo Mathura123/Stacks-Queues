@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Stacks_Queues
+namespace StacksQueuesProblem
 {
     class Stack
     {
-        public Node top;
+        private Node top;
         public Stack()
         {
         }
@@ -63,7 +63,7 @@ namespace Stacks_Queues
                     Console.WriteLine("-----------------");
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine($"Exception in {nameof(Display)} : {e.Message}");
             }
