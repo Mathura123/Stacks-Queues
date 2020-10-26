@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksQueuesProblem
 {
-    class Queue
+    public class Queue
     {
         private Node first;
         public Queue()
