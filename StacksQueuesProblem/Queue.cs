@@ -38,7 +38,7 @@ namespace StacksQueuesProblem
             try
             {
                 if (first == null)
-                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                    throw new StacksAndQueuesException(StacksAndQueuesException.ExceptionType.NO_VALUE_IN_QUEUE, "No Value in Queue");
                 else
                 {
                     Console.WriteLine("----------------");

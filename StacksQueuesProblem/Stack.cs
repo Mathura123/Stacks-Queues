@@ -30,7 +30,7 @@ namespace StacksQueuesProblem
             try
             {
                 if (top == null)
-                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                    throw new StacksAndQueuesException(StacksAndQueuesException.ExceptionType.NO_VALUE_IN_STACK, "No Value in Stack");
                 else
                 {
                     Console.WriteLine($"POPED {top.data} from Top");
@@ -47,7 +47,7 @@ namespace StacksQueuesProblem
             try
             {
                 if (top == null)
-                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                    throw new StacksAndQueuesException(StacksAndQueuesException.ExceptionType.NO_VALUE_IN_STACK, "No Value in Stack");
                 else
                 {
                     Console.WriteLine("----------------");
@@ -64,7 +64,7 @@ namespace StacksQueuesProblem
             try
             {
                 if (top == null)
-                    throw new StackException(StackException.ExceptionType.NO_VALUE, "No Value in Stack");
+                    throw new StacksAndQueuesException(StacksAndQueuesException.ExceptionType.NO_VALUE_IN_QUEUE, "No Value in Queue");
                 else
                 {
                     Console.WriteLine("----------------");

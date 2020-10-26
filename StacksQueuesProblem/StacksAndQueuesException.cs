@@ -4,14 +4,15 @@ using System.Text;
 
 namespace StacksQueuesProblem
 {
-    public class StackException : Exception
+    public class StacksAndQueuesException : Exception
     {
         public enum ExceptionType
         {
-            NO_VALUE
+            NO_VALUE_IN_STACK,
+            NO_VALUE_IN_QUEUE
         }
         private ExceptionType type;
-        public StackException(ExceptionType type, string message) : base(message)
+        public StacksAndQueuesException(ExceptionType type, string message) : base(message)
         {
             this.type = type;
         }
