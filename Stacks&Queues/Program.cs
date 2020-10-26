@@ -12,6 +12,7 @@ namespace Stacks_Queues
             stackObj.Push(9);
             stackObj.Push(0);
             stackObj.Push(-8);
+            stackObj.Pop();
             stackObj.Push(67);
             stackObj.Display();
         }

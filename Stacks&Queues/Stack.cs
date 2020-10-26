@@ -25,6 +25,16 @@ namespace Stacks_Queues
             newNode.next = tempNode;
             Console.WriteLine($"PUSHED {newNode.data}");
         }
+        public void Pop()
+        {
+            if (top == null)
+                Console.WriteLine("No values in Stack");
+            else
+            {
+                Console.WriteLine($"POPED {top.data} from Top");
+                top = top.next;
+            }
+        }
         public void Display()
         {
             if(top==null)
