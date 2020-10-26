@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksQueuesProblem
 {
-    class StackException : Exception
+    public class StackException : Exception
     {
         public enum ExceptionType
         {
